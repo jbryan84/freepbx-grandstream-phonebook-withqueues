@@ -72,7 +72,7 @@ foreach ($entries as $entry) {
     }
     $Phone = $Contact->addChild('Phone');
     $phonenumber = $Phone->addChild('phonenumber', isset($entry['extension']) ? $entry['extension'] : $entry['number']);
-    $accountindex = $Phone->addChild('accountindex', isset($entry['extension']) ? 1 : 2);
+    $accountindex = $Phone->addChild('accountindex', isset($entry['extension']) ? 1 : 1);
 }
 
 print formatXML($xml_obj->asXML());
